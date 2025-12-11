@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { PieChart, Pie, Cell } from 'recharts';
 import {
     Eye, Trash2, Edit2, CheckCircle, XCircle // Iconlar uchun qo'shildi
-} from 'lucide-react'; 
+} from 'lucide-react';
 
 function AdminBody() {
     const lineData = [
@@ -19,7 +19,7 @@ function AdminBody() {
         { name: 'Sotilgan', value: 63 },
         { name: 'Yangi', value: 25 },
     ];
-    
+
     // RASMDAGI JADVAL UCHUN YANGI MA'LUMOTLAR
     const advertisementData = [
         {
@@ -83,7 +83,7 @@ function AdminBody() {
             date: "1-Avg.2025"
         },
     ];
-    
+
     // Status ranglarini aniqlovchi yordamchi funksiya
     const getStatusClass = (status) => {
         switch (status) {
@@ -324,7 +324,7 @@ function AdminBody() {
                 </div>
 
             </div>
-            
+
             {/* YANGILANGAN JADVAL QISMI: E'lonlar Ro'yxati */}
             <div className='mt-10 bg-white rounded-2xl shadow-sm p-6 pl-[100px]  '>
                 <h2 className='text-[#2B3674] text-[22px] font-bold mb-6'>Bildirishnomalar</h2>
@@ -343,9 +343,9 @@ function AdminBody() {
                 {/* Jadval Qatorlari */}
                 {advertisementData.map((item, index) => (
                     <div key={index} className='grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1.5fr_1.5fr] gap-[20px] items-center py-4   last:border-b-0 min-w-[1000px]'>
-                        
+
                         {/* Nomi va ishlab chiqaruvchi - Bir qatorga joylash uchun whitespace-nowrap va max-w qo'shildi */}
-                        <div className='min-w-[200px]'> 
+                        <div className='min-w-[200px]'>
                             <p className='text-[#2B3674] font-medium text-[15px] whitespace-nowrap overflow-hidden text-ellipsis'>{item.name}</p>
                             <p className='text-[#A3AED0] text-xs whitespace-nowrap overflow-hidden text-ellipsis'>{item.manufacturer}</p>
                         </div>
@@ -361,8 +361,8 @@ function AdminBody() {
 
                         {/* Qo'yilgan sana - Bir qatorga joylashtirildi */}
                         <span className='text-[#2B3674] text-[14px] whitespace-nowrap'>{item.date}</span>
-                        
-                  
+
+
                     </div>
                 ))}
             </div>
